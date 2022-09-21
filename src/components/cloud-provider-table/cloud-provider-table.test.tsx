@@ -10,7 +10,7 @@ describe("test CloudProviderTable", () => {
 
   it("renders cloud provider table", () => {
     render(<CloudProviderTable {...props} />);
-    expect(screen.getByTestId("cloud-provider-table")).toHaveLength(1);
-    expect(screen.getByTestId("cloud-provider-row")).toHaveLength(10);
+    const table = screen.getByTestId("cloud-provider-table");
+    expect(table).toHaveTextContent("aws-af-south-1");
   });
 });

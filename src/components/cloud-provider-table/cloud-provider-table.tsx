@@ -31,7 +31,7 @@ const CloudProviderTable = (props: ICloudProviderTable) => {
         <Table
           sx={{ minWidth: 200 }}
           aria-label="Provider-table"
-          data-test-id="cloud-provider-table"
+          data-testid="cloud-provider-table"
         >
           <TableHead>
             <StyledTableRow>
@@ -44,7 +44,7 @@ const CloudProviderTable = (props: ICloudProviderTable) => {
             {listsToShow?.map((list: ICloudList) => (
               <StyledTableRow
                 key={list.cloud_name}
-                data-test-id="cloud-provider-row"
+                data-testid="cloud-provider-row"
               >
                 <StyledTableCell component="th" scope="row">
                   {list.cloud_name}

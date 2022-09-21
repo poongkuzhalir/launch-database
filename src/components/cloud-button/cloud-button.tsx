@@ -16,7 +16,7 @@ const CloudButton = (props: ICloudButton) => {
     <StyledResetButton
       onClick={handleChange}
       variant="contained"
-      data-test-id="cloud-button"
+      data-testid="cloud-button"
     >
       {text}
     </StyledResetButton>

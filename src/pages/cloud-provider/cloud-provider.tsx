@@ -53,7 +53,7 @@ const CloudProvider = (props: IProps) => {
   };
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
+    navigator?.geolocation?.getCurrentPosition(function (position) {
       setCurrentLocation({
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,

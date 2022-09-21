@@ -31,12 +31,16 @@ const CloudSelect = (props: ICloudSelect) => {
         value={selectedValue}
         onChange={handleChange}
         input={<OutlinedInput />}
-        data-test-id="cloud-select"
+        data-testid="cloud-select"
         renderValue={(selected) => {
           const item = isMultiple ? (
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
               {selected.map((value) => (
-                <Chip key={value} label={value} />
+                <Chip
+                  key={value}
+                  label={value}
+                  data-testid="cloud-select-option"
+                />
               ))}
             </Box>
           ) : (
@@ -46,7 +50,11 @@ const CloudSelect = (props: ICloudSelect) => {
         }}
       >
         {lists.map((selectedValue) => (
-          <MenuItem key={selectedValue} value={selectedValue}>
+          <MenuItem
+            key={selectedValue}
+            value={selectedValue}
+            data-testid="cloud-select-option"
+          >
             {selectedValue}
           </MenuItem>
         ))}
