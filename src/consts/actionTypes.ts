@@ -1,0 +1,1 @@
+export const loadCloudProviderData = 'LOAD_CLOUD_PROVIDER_DATA';

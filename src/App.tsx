@@ -1,24 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { loadCloudProviderActions } from "./actions/cloudProviderActions";
+import CloudProvider from "./pages/cloud-provider/cloud-provider";
+import { Store } from "redux";
 
-function App() {
+interface Props {
+  store: Store;
+}
+
+function App(props: Props) {
+  const { store } = props;
+  React.useEffect(() => {
+    loadCloudProviderActions();
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CloudProvider store={store} />
     </div>
   );
 }
