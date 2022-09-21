@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Store } from "redux";
-import { getDistance, isPointWithinRadius } from "geolib";
+import { isPointWithinRadius } from "geolib";
 import { StyledCloudGrid, StyledSpinnerWrapper } from "./cloud-provider.style";
 import { SelectChangeEvent } from "@mui/material/Select";
 import { CircularProgress } from "@mui/material";
@@ -61,7 +61,7 @@ const CloudProvider = (props: IProps) => {
     });
 
     getCloudLists();
-  }, []);
+  });
 
   const resetAllFilters = () => {
     setCloudListsToShow(cloudLists);
